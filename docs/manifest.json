@@ -1,0 +1,16 @@
+{
+    "name": "Credit Card Form",
+    "short_name": "CCForm",
+    "description": "A simple form to access your browser's stored credit card information.",
+    "start_url": "/credit-card-form",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4b4b4b",
+    "icons": [
+        {
+            "src": "./icons/app.ico",
+            "sizes": "48x48 72x72 96x96 120x120 128x128 144x144 152x152 180x180 192x192 384x384 512x512",
+            "type": "image/x-icon"
+        }
+    ]
+}

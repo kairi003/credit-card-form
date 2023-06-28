@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "icon-gen": "^3.0.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "icon": "node icons/make.js"
+  }
+}
