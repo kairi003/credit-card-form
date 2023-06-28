@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .copy-button::before {
+      content: "Copy"
+    }
+
+    .copy-button.btn-success::before {
+      content: "Copied!"
+    }
+
+    .copy-button.btn-danger::before {
+      content: "Failed!"
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column ">
+  <main class="container mt-5 flex-grow-1">
+    <h1 class="mb-4">Credit Card Form</h1>
+    <p class="mb-1">A simple form to access your browser's stored credit card information. No data is transmitted.</p>
+    <p class="mb-4">Source: <a href="https://github.com/kairi003/credit-card-form"
+        target="_blank">https://github.com/kairi003/credit-card-form</a></p>
+
+    <form id="ccForm" method="post" class="row g-3" autocomplete="on">
+      <div class="col-12">
+        <label for="cc-name" class="form-label">Cardholder Name:</label>
+        <div class="input-group">
+          <input type="text" id="ccName" name="cardholderName" autocomplete="cc-name" class="form-control">
+          <button class="btn btn-secondary copy-button" type="button" data-for="ccName"></button>
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="cc-number" class="form-label">Card Number:</label>
+        <div class="input-group">
+          <input type="password" id="ccNumber" name="cardNumber" autocomplete="cc-number" class="form-control secret"
+            pattern="[0-9-]*" inputmode="numeric">
+          <button class="btn btn-secondary copy-button" type="button" data-for="ccNumber"></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cc-exp" class="form-label">Expiration Date:</label>
+        <div class="input-group">
+          <input type="text" id="ccExp" name="expirationDate" autocomplete="cc-exp" class="form-control"
+            pattern="[0-9/]*" inputmode="numeric">
+          <button class="btn btn-secondary copy-button" type="button" data-for="ccExp"></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="cc-csc" class="form-label">Security Code:</label>
+        <div class="input-group">
+          <input type="password" id="ccCsc" name="securityCode" autocomplete="cc-csc" class="form-control secret"
+            pattern="[0-9]*" inputmode="numeric">
+          <button class="btn btn-secondary copy-button" type="button" data-for="ccCsc"></button>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="toggleVisibility">
+          <label class="form-check-label" for="toggleVisibility">
+            Toggle Secrets Visibility
+          </label>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">Copyright &copy; 2023 kairi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const ccForm = document.getElementById("ccForm");
+    ccForm.addEventListener("submit", event => event.preventDefault());
+
+    const copyButtons = document.querySelectorAll(".copy-button");
+    copyButtons.forEach(button => {
+      button.addEventListener("click", event => {
+        const button = event.target;
+        const id = button.dataset.for;
+        const { value } = document.getElementById(id);
+        if (value && navigator.clipboard) {
+          navigator.clipboard.writeText(value);
+          button.classList.add("btn-success");
+        } else {
+          button.classList.add("btn-danger");
+        }
+        setTimeout(() => {
+          button.classList.remove("btn-success");
+          button.classList.remove("btn-danger");
+        }, 1500);
+      });
+    });
+
+    const toggleVisibility = document.getElementById("toggleVisibility");
+    toggleVisibility.addEventListener("change", event => {
+      const { checked } = event.target;
+      document.querySelectorAll(".secret").forEach(secret => {
+        secret.type = checked ? "text" : "password";
+      });
+    });
+  </script>
+</body>
+
+</html>
