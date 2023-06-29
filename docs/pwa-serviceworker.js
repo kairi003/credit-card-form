@@ -1,4 +1,4 @@
-// Service Worker のバージョンとキャッシュする App Shell を定義する
+// Define chaches name, version and files to cache
 
 const NAME = 'credit-card-form-chaches';
 const VERSION = '1.0.0';
@@ -9,8 +9,7 @@ const urlsToCache = [
   './bootstrap.min.css',
 ];
 
-// Service Worker へファイルをインストール
-
+// Install Service Worker
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -18,10 +17,9 @@ self.addEventListener('install', event => {
   );
 });
 
-// リクエストされたファイルが Service Worker にキャッシュされている場合
-// キャッシュからレスポンスを返す
 
-self.addEventListener('fetch', event =>  {
+// Use Service Worker to cache files
+self.addEventListener('fetch', event => {
   if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin')
     return;
   event.respondWith(
@@ -30,8 +28,8 @@ self.addEventListener('fetch', event =>  {
   );
 });
 
-// キャッシュのバージョンが変わった場合、古いキャッシュを削除する
 
+// Update Service Worker
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => Promise.all(
@@ -39,12 +37,9 @@ self.addEventListener('activate', event => {
         const parts = cacheName.split(':');
         const version = parts.pop();
         const name = parts.join(':');
-        if (name === NAME && version !== VERSION) {
+        if (name === NAME && version !== VERSION)
           return caches.delete(cacheName);
-        }
-      })
-    )).then(() => {
-      console.log(CACHE_NAME + "activated");
-    })
+      }))
+    )
   );
 });

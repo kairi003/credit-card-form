@@ -27,29 +27,25 @@
      showguides="true"
      inkscape:snap-global="false"
      inkscape:zoom="4.3641747"
-     inkscape:cx="63.700475"
-     inkscape:cy="89.707684"
+     inkscape:cx="63.585905"
+     inkscape:cy="89.707683"
      inkscape:window-width="1682"
      inkscape:window-height="1351"
-     inkscape:window-x="868"
+     inkscape:window-x="860"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer5">
+     inkscape:current-layer="layer3">
     <inkscape:grid
        type="xygrid"
        id="grid3431" />
   </sodipodi:namedview>
   <defs
-     id="defs2">
-	
-	
-	
-	
-</defs>
+     id="defs2" />
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Layer 5">
+     inkscape:label="Layer 5"
+     style="display:inline">
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.11667;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="rect6027"
@@ -58,60 +54,6 @@
        x="0"
        y="0"
        ry="4.2333331" />
-  </g>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     style="display:none">
-    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#4b4b4b;stroke-width:2.11668;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-       id="rect871"
-       width="21.185917"
-       height="29.001684"
-       x="4.0086017"
-       y="3.1769528"
-       ry="2.4443004" />
-    <rect
-       style="fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.32292;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-       id="rect2576"
-       width="6.7711573"
-       height="2.6458333"
-       x="7.9375"
-       y="8.9958334"
-       ry="0" />
-    <rect
-       style="fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.32292;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-       id="rect2576-16"
-       width="12.728009"
-       height="2.6458333"
-       x="7.9388914"
-       y="21.980827"
-       ry="0" />
-    <rect
-       style="display:inline;fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.32292;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-       id="rect2576-16-5"
-       width="12.728009"
-       height="2.6458333"
-       x="8.0097065"
-       y="26.573992"
-       ry="0" />
-    <rect
-       style="fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.32292;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-       id="rect2576-16-4"
-       width="13.229166"
-       height="2.6458335"
-       x="8.0236006"
-       y="16.881704"
-       ry="0" />
-    <rect
-       style="fill:#4b4b4b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.32292;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-       id="rect2576-1"
-       width="3.175"
-       height="2.6458333"
-       x="17.387344"
-       y="8.8945732"
-       ry="0" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -185,33 +127,6 @@
        x="9.5249996"
        y="5.2916665"
        ry="0" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="Layer 4"
-     style="display:none">
-    <g
-       id="g5453"
-       transform="matrix(1,0,0,0.83333336,5.5858061e-7,-0.02229018)"
-       style="display:inline;stroke-width:1.09545">
-      <rect
-         style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.44919;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-         id="rect2576-8-6"
-         width="8.4666662"
-         height="3.175"
-         x="6.3499994"
-         y="7.6467481"
-         ry="0" />
-      <rect
-         style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.44919;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-         id="rect2576-1-0"
-         width="3.175"
-         height="3.175"
-         x="17.991667"
-         y="7.6467481"
-         ry="0" />
-    </g>
   </g>
   <g
      inkscape:groupmode="layer"
