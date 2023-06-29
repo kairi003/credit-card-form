@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- For Facebook -->
   <meta property="og:title" content="Credit Card Form">
   <meta property="og:description" content="A simple form to access your browser's stored credit card information.">
@@ -125,6 +125,14 @@
         secret.type = checked ? "text" : "password";
       });
     });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(registration => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
   </script>
 </body>
 
