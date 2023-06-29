@@ -4,8 +4,8 @@
     "description": "A simple form to access your browser's stored credit card information.",
     "start_url": "/credit-card-form/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4b4b4b",
+    "background_color": "#FFFFFF",
+    "theme_color": "#4B4B4B",
     "icons": [
         {
             "src": "./icon/icon-48.png",
