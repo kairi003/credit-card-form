@@ -8,17 +8,17 @@
   <!-- For Facebook -->
   <meta property="og:title" content="Credit Card Form">
   <meta property="og:description" content="A simple form to access your browser's stored credit card information.">
-  <meta property="og:image" content="https://kairi003.github.io/credit-card-form/icons/thumbnail.png">
+  <meta property="og:image" content="https://kairi003.github.io/credit-card-form/icon/icon-512.png">
   <meta property="og:url" content="https://kairi003.github.io/credit-card-form/">
   <meta property="og:type" content="website">
 
   <!-- For Twitter -->
   <meta name="twitter:title" content="Credit Card Form">
   <meta name="twitter:description" content="A simple form to access your browser's stored credit card information.">
-  <meta name="twitter:image" content="https://kairi003.github.io/credit-card-form/icons/thumbnail.png">
+  <meta name="twitter:image" content="https://kairi003.github.io/credit-card-form/icon/icon-512.png">
 
   <title>Credit Card Form</title>
-  <link rel="icon" href="./icons/favicon.ico">
+  <link rel="icon" href="./icon/favicon.ico">
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="./bootstrap.min.css">
   <style>
@@ -125,13 +125,17 @@
         secret.type = checked ? "text" : "password";
       });
     });
-
+  </script>
+  <script>
+    // Register service worker for PWA
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').then(registration => {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }).catch(err => {
-        console.log('ServiceWorker registration failed: ', err);
-      });
+      navigator.serviceWorker.register('pwa-serviceworker.js')
+        .then(registration => {
+          console.log('ServiceWorker registered with scope: ', registration.scope);
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
     }
   </script>
 </body>

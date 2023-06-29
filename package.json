@@ -5,6 +5,6 @@
     "path": "^0.12.7"
   },
   "scripts": {
-    "icon": "node icons/make.js"
+    "icon": "node icon/make.js"
   }
 }
