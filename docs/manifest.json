@@ -1,7 +1,7 @@
 {
     "name": "Credit Card Form",
     "short_name": "CCForm",
-    "description": "A simple form to access your browser's stored credit card information.",
+    "description": "A simple form to access credit card information stored in your browser.",
     "start_url": "/credit-card-form/",
     "display": "standalone",
     "background_color": "#FFFFFF",
